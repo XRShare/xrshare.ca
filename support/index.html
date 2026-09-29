@@ -8,24 +8,34 @@
   <link rel="canonical" href="https://xrshare.ca/support/">
   <meta name="apple-itunes-app" content="app-id=6752354657">
   <meta name="theme-color" content="#e8e6e1">
-  <link rel="icon" href="/favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" href="/favicon-32.png">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XRShare">
+  <meta property="og:title" content="XRShare Support">
+  <meta property="og:description" content="Get help with XRShare: contact the team, check device requirements, and read answers to common questions about SharePlay sessions, models and AR placement.">
+  <meta property="og:url" content="https://xrshare.ca/support/">
+  <meta property="og:image" content="https://xrshare.ca/assets/img/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A 3D skin cross-section beside the words: See the same model, in the same place.">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="preload" href="/assets/fonts/newsreader.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/assets/css/site.css">
+  <script defer src="/assets/js/site.js"></script>
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
 
-  <header class="site-head">
+  <header class="site-head always">
     <div class="wrap">
-      <a class="brand" href="/"><img src="/assets/img/icon-512.png" alt="" width="30" height="30">XRShare</a>
+      <a class="brand" href="/"><img src="/assets/img/icon-512.png" alt="" width="28" height="28">XRShare</a>
       <nav class="nav" aria-label="Primary">
-        <a class="hide-sm" href="/">Home</a>
+        <a class="wide" href="/">Home</a>
         <a href="/privacy/">Privacy</a>
         <a href="/support/" aria-current="page">Support</a>
+        <a class="get" href="https://apps.apple.com/app/xrshare/id6752354657">Get the app</a>
       </nav>
     </div>
   </header>
@@ -33,27 +43,24 @@
   <main id="main" class="doc">
     <div class="wrap">
       <aside>
-        <p class="label">On this page</p>
-        <ol>
-          <li><a href="#contact">Contact us</a></li>
+        <details class="toc">
+          <summary>On this page</summary>
+          <ol>
           <li><a href="#requirements">Requirements</a></li>
           <li><a href="#faq">Common questions</a></li>
+          <li><a href="#contact">Contact us</a></li>
           <li><a href="#report">Reporting a problem</a></li>
         </ol>
+        </details>
+        <a class="badge aside-badge" href="https://apps.apple.com/app/xrshare/id6752354657"><img src="/assets/img/badge-app-store-black.svg" alt="Download on the App Store" width="132" height="44"></a>
       </aside>
 
       <article>
-        <p class="label">Support</p>
+        <p class="mono">Support</p>
         <h1>How can we help?</h1>
-        <p>XRShare is made by a small team, and every message reaches one of us directly. Check the questions below first. If they don&rsquo;t cover your problem, email us.</p>
+        <p>XRShare is made by a small team, and every message reaches one of us directly. Most answers are below. If yours isn&rsquo;t, email us and we&rsquo;ll help.</p>
 
-        <div class="contact-card" id="contact">
-          <div>
-            <p class="label" style="margin:0 0 6px">Email support</p>
-            <a href="mailto:ali.kara@xrshare.ca?subject=XRShare%20support">ali.kara@xrshare.ca</a>
-          </div>
-          <p style="margin:0;color:#b7b3aa;font-size:14px">Every message is read<br>by the XRShare team.</p>
-        </div>
+        <p><a class="textlink" href="#contact">Skip to contact details</a></p>
 
         <h2 id="requirements">Requirements</h2>
         <table>
@@ -68,7 +75,7 @@
 
         <h2 id="faq">Common questions</h2>
 
-        <details open>
+        <details class="qa" open>
           <summary>How do I start a session with other people?</summary>
           <ol>
             <li>Start a FaceTime call with the people you want to invite.</li>
@@ -78,12 +85,12 @@
           <p>Anyone who joins later automatically receives the models already in the scene.</p>
         </details>
 
-        <details>
+        <details class="qa">
           <summary>Can I use XRShare on my own?</summary>
           <p>Yes. Choose <strong>Local Session</strong> on the home screen. It works offline, and nothing is shared.</p>
         </details>
 
-        <details>
+        <details class="qa">
           <summary>Models appear in the wrong place, or drift</summary>
           <ul>
             <li>After starting a session, move your iPhone or iPad slowly around the room for a few seconds. This gives AR tracking more of the room to work with.</li>
@@ -92,30 +99,39 @@
           </ul>
         </details>
 
-        <details>
+        <details class="qa">
           <summary>The other participants can&rsquo;t see my model</summary>
           <p>Make sure everyone joined the same SharePlay session. For models you imported yourself, both you and the other participants need to be signed in to iCloud, and the model may take a moment to download on their devices.</p>
         </details>
 
-        <details>
+        <details class="qa">
           <summary>How do I add my own 3D models?</summary>
           <p>Save a <strong>.usdz</strong> file to the Files app, open the model picker in XRShare, and choose to import. Imported models are stored in your iCloud account, so they appear on all your devices signed in to that account. Many 3D tools and Apple&rsquo;s Reality Composer can export USDZ.</p>
         </details>
 
-        <details>
+        <details class="qa">
           <summary>How do I stop sharing a model or delete it?</summary>
           <p>Open the Model Library in XRShare. There you can stop sharing a model, change who can view or edit it, or delete it. Deleting it also removes it from your iCloud.</p>
         </details>
 
-        <details>
+        <details class="qa">
           <summary>Does XRShare collect my data?</summary>
           <p>No. XRShare has no accounts, analytics or tracking, and does not send anything to our servers. See the <a href="/privacy/">Privacy Policy</a> for what is shared with other people in a SharePlay session.</p>
         </details>
 
-        <details>
+        <details class="qa">
           <summary>Can I try a model without installing the app?</summary>
           <p>Yes. The <a href="/">home page</a> has a live 3D viewer. On an iPhone or iPad, tap <strong>View in your room</strong> to place the model on a surface with AR Quick Look.</p>
         </details>
+
+        <h2 id="contact">Contact us</h2>
+        <div class="contact-card">
+          <div>
+            <p class="mono">Email support</p>
+            <a class="email" href="mailto:ali.kara@xrshare.ca?subject=XRShare%20support">ali.kara@xrshare.ca</a>
+          </div>
+          <p>Every message is read<br>by the XRShare team.</p>
+        </div>
 
         <h2 id="report">Reporting a problem</h2>
         <p>Help us fix a problem quickly by including:</p>
@@ -139,8 +155,8 @@
         <a href="/support/">Support</a>
         <a href="https://apps.apple.com/app/xrshare/id6752354657">App Store</a>
       </nav>
+      <p class="tm">Apple, iPhone, iPad, Apple Vision Pro, FaceTime and SharePlay are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</p>
     </div>
   </footer>
-  <script defer src="/assets/js/site.js"></script>
 </body>
 </html>

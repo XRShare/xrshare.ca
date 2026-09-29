@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <style>
+    .i { fill: none; stroke: #141414; stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; }
+    @media (prefers-color-scheme: dark) { .i { stroke: #ecebe6; } }
+  </style>
+  <!-- outer ring, open at the bottom like the app icon -->
+  <path class="i" d="M11.2 29.2 A14 14 0 1 1 20.8 29.2"/>
+  <!-- X -->
+  <path class="i" d="M8.6 11 L14.4 21 M14.4 11 L8.6 21"/>
+  <!-- R -->
+  <path class="i" d="M17.4 21 V11 H20.9 A2.9 2.9 0 0 1 20.9 16.8 H17.4 M20.4 16.8 L23.6 21"/>
+</svg>
