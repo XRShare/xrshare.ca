@@ -50,7 +50,8 @@
     <div class="wrap">
       <a class="brand" href="/"><img src="/assets/img/icon-512.png" alt="" width="30" height="30">XRShare</a>
       <nav class="nav" aria-label="Primary">
-        <a class="hide-sm" href="#how">How it works</a>
+        <a class="hide-sm" href="#demo">Try it</a>
+        <a class="hide-sm" href="#features">Features</a>
         <a class="hide-sm" href="#vision">Vision Pro</a>
         <a href="/privacy/">Privacy</a>
         <a href="/support/">Support</a>
@@ -171,11 +172,72 @@
       </div>
     </section>
 
+    <!-- Simulated two-person session -->
+    <section class="section" id="demo">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">03 &mdash; Try a session</p>
+          <div>
+            <h2>Two people, one model. <em>Try it.</em></h2>
+            <p class="lede">This is a simulated SharePlay session between an iPhone and an Apple Vision Pro. Each side looks from its own angle. Rotate, resize, pin or annotate the model on one side and watch it update on the other.</p>
+          </div>
+        </div>
+
+        <div class="session">
+          <div class="session-bar">
+            <span class="live"><i></i>SharePlay &middot; 2 participants</span>
+            <label class="session-model">Model
+              <select id="demo-model" aria-label="Model in the session">
+                <option value="skin">Skin cross-section</option>
+                <option value="neuron">Neuron</option>
+                <option value="cell">Eukaryotic cell</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="peers">
+            <div class="peer" data-peer="a">
+              <div class="peer-head"><span class="who"><i style="--c:#c8372a"></i>Maya</span><span class="label">iPhone</span></div>
+              <model-viewer class="peer-view" src="/assets/models/skin.glb" alt="Maya's view of the shared model"
+                camera-controls camera-orbit="-35deg 72deg auto" interaction-prompt="none" touch-action="pan-y"
+                shadow-intensity="0.5" environment-image="neutral" loading="lazy"></model-viewer>
+              <div class="peer-tools" role="group" aria-label="Maya's controls">
+                <button type="button" data-act="rot" data-v="-30" aria-label="Rotate left">&#x21BA;</button>
+                <button type="button" data-act="rot" data-v="30" aria-label="Rotate right">&#x21BB;</button>
+                <button type="button" data-act="scale" data-v="-0.15" aria-label="Smaller">&minus;</button>
+                <button type="button" data-act="scale" data-v="0.15" aria-label="Larger">+</button>
+                <button type="button" data-act="pin" aria-pressed="false">Pin</button>
+                <form class="note-form"><input type="text" maxlength="80" placeholder="Add a note&hellip;" aria-label="Maya's note"><button type="submit">Send</button></form>
+              </div>
+            </div>
+
+            <div class="peer" data-peer="b">
+              <div class="peer-head"><span class="who"><i style="--c:#2f6fd6"></i>Sam</span><span class="label">Apple Vision Pro</span></div>
+              <model-viewer class="peer-view" src="/assets/models/skin.glb" alt="Sam's view of the shared model"
+                camera-controls camera-orbit="55deg 80deg auto" interaction-prompt="none" touch-action="pan-y"
+                shadow-intensity="0.5" environment-image="neutral" loading="lazy"></model-viewer>
+              <div class="peer-tools" role="group" aria-label="Sam's controls">
+                <button type="button" data-act="rot" data-v="-30" aria-label="Rotate left">&#x21BA;</button>
+                <button type="button" data-act="rot" data-v="30" aria-label="Rotate right">&#x21BB;</button>
+                <button type="button" data-act="scale" data-v="-0.15" aria-label="Smaller">&minus;</button>
+                <button type="button" data-act="scale" data-v="0.15" aria-label="Larger">+</button>
+                <button type="button" data-act="pin" aria-pressed="false">Pin</button>
+                <form class="note-form"><input type="text" maxlength="80" placeholder="Add a note&hellip;" aria-label="Sam's note"><button type="submit">Send</button></form>
+              </div>
+            </div>
+          </div>
+
+          <ol class="feed" id="feed" aria-live="polite" aria-label="Session activity"></ol>
+        </div>
+        <p class="label" style="margin-top:14px">Drag inside either view to look around from that person&rsquo;s position. That camera is personal and is not shared.</p>
+      </div>
+    </section>
+
     <!-- iPhone screens -->
     <section class="section" id="iphone">
       <div class="wrap">
         <div class="section-head">
-          <p class="label">03 &mdash; On iPhone &amp; iPad</p>
+          <p class="label">04 &mdash; On iPhone &amp; iPad</p>
           <div>
             <h2>Your phone becomes a <em>window</em> into the shared scene.</h2>
             <p class="lede">Aim your iPhone or iPad at the room and the models are there, anchored where someone placed them.</p>
@@ -205,7 +267,7 @@
     <section class="section night" id="vision">
       <div class="wrap">
         <div class="section-head">
-          <p class="label">04 &mdash; On Apple Vision Pro</p>
+          <p class="label">05 &mdash; On Apple Vision Pro</p>
           <div>
             <h2>Models at full scale, <em>all around the room.</em></h2>
             <p class="lede">On Apple Vision Pro, models float in your space and respond to your hands. Use the control panel for exact placement, read or listen to each model's description, and join the same SharePlay session as people on iPhone and iPad.</p>
@@ -227,11 +289,62 @@
       </div>
     </section>
 
+    <!-- Features -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">06 &mdash; Features</p>
+          <div>
+            <h2>More than looking. <em>Working together.</em></h2>
+            <p class="lede">Everything in XRShare is built to be shared. What one person does, everyone in the session sees.</p>
+          </div>
+        </div>
+        <div class="feature-grid">
+          <article class="feature">
+            <p class="label">Bring your own</p>
+            <h3>Your models, in the room</h3>
+            <p>Import any USDZ file from Files. It is saved to your iCloud, so it appears on your iPhone, iPad and Vision Pro. Add it to a session and everyone can load it.</p>
+          </article>
+          <article class="feature">
+            <p class="label">Pins &amp; notes</p>
+            <h3>Point at exactly what you mean</h3>
+            <p>Drop coloured pins on a model and attach notes to them. Everyone in the session sees them instantly, in the same spot.</p>
+          </article>
+          <article class="feature">
+            <p class="label">Model Library</p>
+            <h3>Share on your terms</h3>
+            <p>Share models with iCloud links, choose whether each person can view or edit, decide whether they can share onward, and stop sharing at any time.</p>
+          </article>
+          <article class="feature">
+            <p class="label">iPhone + Vision Pro</p>
+            <h3>One room, every device</h3>
+            <p>Link an iPhone with an Apple Vision Pro: the phone shows a marker on its screen, and the headset uses it to line up both views of the room.</p>
+          </article>
+          <article class="feature">
+            <p class="label">Participants</p>
+            <h3>Know who&rsquo;s there</h3>
+            <p>See everyone in the session by name, who is hosting, and how many models are in the scene.</p>
+          </article>
+          <article class="feature">
+            <p class="label">Vision Pro</p>
+            <h3>Precise and hands-free</h3>
+            <p>Grab models with your hands, set exact position, rotation and scale in the control panel, and have each model&rsquo;s description read aloud with Narrate.</p>
+          </article>
+        </div>
+        <dl class="features">
+          <div><dt>Sessions</dt><dd>Local Session for working alone offline. SharePlay Session over FaceTime for everyone else.</dd></div>
+          <div><dt>Library</dt><dd>Nine detailed anatomy models with descriptions, plus favourites and your own imports.</dd></div>
+          <div><dt>Devices</dt><dd>iPhone and iPad with iOS 26 or later, and Apple Vision Pro with visionOS 26 or later.</dd></div>
+          <div><dt>Price</dt><dd>Free, with no account to create, no ads and no tracking.</dd></div>
+        </dl>
+      </div>
+    </section>
+
     <!-- Who it's for -->
     <section class="section" id="uses">
       <div class="wrap">
         <div class="section-head">
-          <p class="label">05 &mdash; Built for</p>
+          <p class="label">07 &mdash; Built for</p>
           <div><h2>Anywhere people need to <em>point at the same thing.</em></h2></div>
         </div>
         <div class="uses">
@@ -251,24 +364,6 @@
             <p>Import USDZ files from Files, share them with people in the session, and look them over together at real scale.</p>
           </article>
         </div>
-      </div>
-    </section>
-
-    <!-- Feature list -->
-    <section class="section" id="features">
-      <div class="wrap">
-        <div class="section-head">
-          <p class="label">06 &mdash; In the app</p>
-          <div><h2>What&rsquo;s included.</h2></div>
-        </div>
-        <dl class="features">
-          <div><dt>Sessions</dt><dd>Local Session for working alone offline. SharePlay Session for working with others over FaceTime.</dd></div>
-          <div><dt>Sync</dt><dd>Adding, removing, moving, rotating and scaling models appears live for everyone.</dd></div>
-          <div><dt>Library</dt><dd>Nine detailed anatomy models, each with a written description.</dd></div>
-          <div><dt>Your models</dt><dd>Import USDZ files and keep them in your iCloud so they appear on all your devices.</dd></div>
-          <div><dt>Devices</dt><dd>iPhone and iPad running iOS 26 or later, and Apple Vision Pro running visionOS 26 or later.</dd></div>
-          <div><dt>Tutorial</dt><dd>A short built-in walkthrough for first-time users.</dd></div>
-        </dl>
       </div>
     </section>
 
