@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xrshare.ca/sitemap.xml

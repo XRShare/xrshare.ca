@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>XRShare: shared 3D models in AR for iPhone, iPad and Apple Vision Pro</title>
+  <meta name="description" content="XRShare puts detailed 3D models into the room and lets everyone on a SharePlay call see, move and study them together on iPhone, iPad and Apple Vision Pro. Free on the App Store.">
+  <link rel="canonical" href="https://xrshare.ca/">
+  <meta name="apple-itunes-app" content="app-id=6752354657">
+  <meta name="theme-color" content="#e8e6e1">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="XRShare">
+  <meta property="og:title" content="XRShare: see the same model, in the same place">
+  <meta property="og:description" content="Collaborative AR for iPhone, iPad and Apple Vision Pro. Place detailed 3D models in your space and explore them together over SharePlay.">
+  <meta property="og:url" content="https://xrshare.ca/">
+  <meta property="og:image" content="https://xrshare.ca/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" href="/favicon-32.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/site.css">
+
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  <script defer src="/assets/js/site.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "XRShare",
+    "operatingSystem": "iOS 26, iPadOS 26, visionOS 26",
+    "applicationCategory": "EducationalApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+    "url": "https://xrshare.ca/",
+    "downloadUrl": "https://apps.apple.com/app/xrshare/id6752354657",
+    "publisher": { "@type": "Organization", "name": "XRShare Technologies", "url": "https://xrshare.ca/" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-head">
+    <div class="wrap">
+      <a class="brand" href="/"><img src="/assets/img/icon-512.png" alt="" width="30" height="30">XRShare</a>
+      <nav class="nav" aria-label="Primary">
+        <a class="hide-sm" href="#how">How it works</a>
+        <a class="hide-sm" href="#vision">Vision Pro</a>
+        <a href="/privacy/">Privacy</a>
+        <a href="/support/">Support</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- Hero: a live specimen plate -->
+    <section class="hero">
+      <div class="wrap">
+        <div class="hero-copy">
+          <p class="label rise">Collaborative AR &middot; iPhone, iPad, Apple Vision Pro</p>
+          <h1 class="rise r2">See the same model, in <em>the same place.</em></h1>
+          <p class="lede rise r3">XRShare places detailed 3D models in the room around you and lets everyone on a SharePlay call see, move and study them together. Changes appear on every device right away.</p>
+          <div class="cta rise r4">
+            <a class="badge" href="https://apps.apple.com/app/xrshare/id6752354657" aria-label="Download XRShare on the App Store">
+              <img src="/assets/img/badge-app-store-black.svg" alt="Download on the App Store" width="156" height="52">
+            </a>
+            <a class="textlink" href="#how">How it works</a>
+          </div>
+          <ul class="facts rise r5">
+            <li>Free</li>
+            <li>No account to create</li>
+            <li>No ads or tracking</li>
+          </ul>
+        </div>
+
+        <div class="plate rise r3" aria-label="Interactive 3D model">
+          <svg class="rings" viewBox="0 0 600 600" aria-hidden="true">
+            <circle cx="300" cy="300" r="290" stroke-width="1" opacity=".18"/>
+            <circle cx="300" cy="300" r="240" stroke-width="1" opacity=".28"/>
+            <circle cx="300" cy="300" r="190" stroke-width="1" opacity=".4" stroke-dasharray="2 7"/>
+            <circle class="pulse" cx="300" cy="300" r="290" stroke-width="1.5"/>
+            <circle class="pulse" cx="300" cy="300" r="290" stroke-width="1.5"/>
+            <circle class="pulse" cx="300" cy="300" r="290" stroke-width="1.5"/>
+            <path d="M300 4 v18 M300 578 v18 M4 300 h18 M578 300 h18" stroke-width="1" opacity=".5"/>
+          </svg>
+
+          <model-viewer id="specimen"
+            src="/assets/models/skin.glb"
+            ios-src="/assets/models/skin.usdz"
+            alt="3D cross-section model of human skin"
+            camera-controls
+            auto-rotate
+            auto-rotate-delay="0"
+            rotation-per-second="18deg"
+            interaction-prompt="none"
+            shadow-intensity="0.6"
+            shadow-softness="1"
+            exposure="1.05"
+            environment-image="neutral"
+            ar
+            ar-modes="quick-look scene-viewer webxr"
+            touch-action="pan-y"
+            loading="eager">
+          </model-viewer>
+
+          <span class="device d1">iPhone</span>
+          <span class="device d2">Apple Vision Pro</span>
+          <span class="device d3">iPad</span>
+
+          <div class="plate-caption">
+            <div class="specimens" role="group" aria-label="Choose a model">
+              <button type="button" data-model="skin" aria-pressed="true">Skin</button>
+              <button type="button" data-model="neuron" aria-pressed="false">Neuron</button>
+              <button type="button" data-model="cell" aria-pressed="false">Cell</button>
+            </div>
+            <button type="button" class="ar-btn" id="ar-btn" hidden>View in your room</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Specimen description -->
+    <section class="section" style="padding-top: clamp(40px,5vw,72px); padding-bottom: clamp(40px,5vw,72px);">
+      <div class="wrap section-head" style="margin-bottom:0">
+        <p class="label">Fig. <b id="fig-num">01</b> &mdash; <span id="fig-name">Skin cross-section</span></p>
+        <div>
+          <p class="lede" id="fig-desc" style="margin-top:0">Layered skin cross-section revealing epidermis, dermis, subcutaneous fat, hair follicle, sebaceous gland, and embedded sensory nerve endings.</p>
+          <p class="label" style="margin-top:14px">Drag to rotate &middot; pinch or scroll to zoom &middot; one of nine models built into the app</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="section" id="how">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">02 &mdash; How it works</p>
+          <div>
+            <h2>From a FaceTime call to a shared <em>specimen table</em> in under a minute.</h2>
+          </div>
+        </div>
+        <ol class="steps">
+          <li>
+            <span class="num">01</span>
+            <h3>Start a session</h3>
+            <p>Open a Local Session to practise alone, or start a SharePlay Session from a FaceTime call to bring others in.</p>
+          </li>
+          <li>
+            <span class="num">02</span>
+            <h3>Pick a model</h3>
+            <p>Choose from the built-in anatomy library (skin, heart, neuron, cell, digestive system and more) or import your own USDZ files.</p>
+          </li>
+          <li>
+            <span class="num">03</span>
+            <h3>Place it in the room</h3>
+            <p>Tap a surface to place it. Move, rotate and scale with familiar gestures, then walk up close to study the details.</p>
+          </li>
+          <li>
+            <span class="num">04</span>
+            <h3>Explore together</h3>
+            <p>Everyone in the session sees the same models in the same place. Every move is synced live, and people who join late catch up automatically.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- iPhone screens -->
+    <section class="section" id="iphone">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">03 &mdash; On iPhone &amp; iPad</p>
+          <div>
+            <h2>Your phone becomes a <em>window</em> into the shared scene.</h2>
+            <p class="lede">Aim your iPhone or iPad at the room and the models are there, anchored where someone placed them.</p>
+          </div>
+        </div>
+        <div class="strip" id="strip" tabindex="0" aria-label="iPhone screenshots">
+          <figure><img src="/assets/img/iphone/01.webp" width="620" height="1342" loading="lazy" alt="XRShare home screen with Local Session, SharePlay Session and Tutorial options"><figcaption class="label">Start a session</figcaption></figure>
+          <figure><img src="/assets/img/iphone/02.webp" width="620" height="1342" loading="lazy" alt="Choosing a model category"><figcaption class="label">Browse categories</figcaption></figure>
+          <figure><img src="/assets/img/iphone/03.webp" width="620" height="1342" loading="lazy" alt="Selecting an anatomy model"><figcaption class="label">Select a model</figcaption></figure>
+          <figure><img src="/assets/img/iphone/04.webp" width="620" height="1342" loading="lazy" alt="A skin cross-section model placed in a room"><figcaption class="label">Place it in your space</figcaption></figure>
+          <figure><img src="/assets/img/iphone/05.webp" width="620" height="1342" loading="lazy" alt="Close-up of the skin model showing layers and vessels"><figcaption class="label">Look up close</figcaption></figure>
+          <figure><img src="/assets/img/iphone/06.webp" width="620" height="1342" loading="lazy" alt="List of models loaded in the scene"><figcaption class="label">Keep track of models</figcaption></figure>
+          <figure><img src="/assets/img/iphone/07.webp" width="620" height="1342" loading="lazy" alt="Two phones in a SharePlay session sharing a neuron model"><figcaption class="label">Share with others</figcaption></figure>
+          <figure><img src="/assets/img/iphone/08.webp" width="620" height="1342" loading="lazy" alt="Two phones showing the same neuron model in the same position"><figcaption class="label">Same model, same place</figcaption></figure>
+        </div>
+        <div class="strip-hint">
+          <p class="label">Scroll sideways &rarr;</p>
+          <div class="strip-nav">
+            <button type="button" data-dir="-1" aria-label="Previous screenshots">&larr;</button>
+            <button type="button" data-dir="1" aria-label="Next screenshots">&rarr;</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision Pro -->
+    <section class="section night" id="vision">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">04 &mdash; On Apple Vision Pro</p>
+          <div>
+            <h2>Models at full scale, <em>all around the room.</em></h2>
+            <p class="lede">On Apple Vision Pro, models float in your space and respond to your hands. Use the control panel for exact placement, read or listen to each model's description, and join the same SharePlay session as people on iPhone and iPad.</p>
+          </div>
+        </div>
+        <div class="stage">
+          <figure class="stage-main">
+            <img id="stage-img" src="/assets/img/vision/final-model-selection.webp" width="1600" height="900" alt="Several anatomy models placed around a gallery room in Apple Vision Pro">
+            <figcaption id="stage-cap">Anatomy models placed around the room, with the model library open.</figcaption>
+          </figure>
+          <ul class="stage-list">
+            <li><button type="button" aria-pressed="true" data-src="final-model-selection" data-cap="Anatomy models placed around the room, with the model library open."><img src="/assets/img/vision/final-model-selection.webp" alt="" loading="lazy">Model library</button></li>
+            <li><button type="button" aria-pressed="false" data-src="shareplay-with-models" data-cap="A SharePlay session with models placed around the room."><img src="/assets/img/vision/shareplay-with-models.webp" alt="" loading="lazy">SharePlay session</button></li>
+            <li><button type="button" aria-pressed="false" data-src="description-with-model-menu-bar" data-cap="A skin cross-section model, with its description and controls below it."><img src="/assets/img/vision/description-with-model-menu-bar.webp" alt="" loading="lazy">Model details</button></li>
+            <li><button type="button" aria-pressed="false" data-src="modelcontrolpanel" data-cap="The control panel for exact position, rotation and scale."><img src="/assets/img/vision/modelcontrolpanel.webp" alt="" loading="lazy">Control panel</button></li>
+            <li><button type="button" aria-pressed="false" data-src="mainmenu" data-cap="The home window: start a Local Session or a SharePlay Session, or open the tutorial."><img src="/assets/img/vision/mainmenu.webp" alt="" loading="lazy">Home</button></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Who it's for -->
+    <section class="section" id="uses">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">05 &mdash; Built for</p>
+          <div><h2>Anywhere people need to <em>point at the same thing.</em></h2></div>
+        </div>
+        <div class="uses">
+          <article class="use">
+            <p class="label">Classrooms</p>
+            <h3>Teach spatial subjects in space</h3>
+            <p>Put a heart or a skin cross-section in the middle of the room and walk the class through it. Every student sees the same thing at the same scale.</p>
+          </article>
+          <article class="use">
+            <p class="label">Study groups</p>
+            <h3>Revise together, apart</h3>
+            <p>Start a FaceTime call, open XRShare over SharePlay, and look at the same model from each person's desk.</p>
+          </article>
+          <article class="use">
+            <p class="label">Design reviews</p>
+            <h3>Bring your own models</h3>
+            <p>Import USDZ files from Files, share them with people in the session, and look them over together at real scale.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Feature list -->
+    <section class="section" id="features">
+      <div class="wrap">
+        <div class="section-head">
+          <p class="label">06 &mdash; In the app</p>
+          <div><h2>What&rsquo;s included.</h2></div>
+        </div>
+        <dl class="features">
+          <div><dt>Sessions</dt><dd>Local Session for working alone offline. SharePlay Session for working with others over FaceTime.</dd></div>
+          <div><dt>Sync</dt><dd>Adding, removing, moving, rotating and scaling models appears live for everyone.</dd></div>
+          <div><dt>Library</dt><dd>Nine detailed anatomy models, each with a written description.</dd></div>
+          <div><dt>Your models</dt><dd>Import USDZ files and keep them in your iCloud so they appear on all your devices.</dd></div>
+          <div><dt>Devices</dt><dd>iPhone and iPad running iOS 26 or later, and Apple Vision Pro running visionOS 26 or later.</dd></div>
+          <div><dt>Tutorial</dt><dd>A short built-in walkthrough for first-time users.</dd></div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- Privacy + Support summary (App Store links point at this page) -->
+    <section class="section" id="privacy-support">
+      <div class="wrap">
+        <div class="notices">
+          <div class="notice" id="privacy-summary">
+            <p class="label">Privacy</p>
+            <h3>We don&rsquo;t collect your data.</h3>
+            <ul>
+              <li>No accounts, analytics, advertising or tracking.</li>
+              <li>No XRShare servers. Nothing you do in the app is sent to us.</li>
+              <li>Camera images are processed on your device and never uploaded.</li>
+              <li>Session data goes only to the people in your SharePlay session. Models you import are stored in your own iCloud account.</li>
+            </ul>
+            <a class="textlink" href="/privacy/">Read the full privacy policy</a>
+          </div>
+          <div class="notice" id="support-summary">
+            <p class="label">Support</p>
+            <h3>Questions or problems?</h3>
+            <p>Email us and a member of the team will reply. Please include your device, its iOS or visionOS version, and what you were trying to do.</p>
+            <p><a href="mailto:ali.kara@xrshare.ca?subject=XRShare%20support" style="font-family:var(--serif);font-size:24px;text-decoration:none">ali.kara@xrshare.ca</a></p>
+            <a class="textlink" href="/support/">Help &amp; FAQ</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div class="wrap">
+        <img class="mark" src="/assets/img/icon-512.png" alt="" width="84" height="84">
+        <h2>Bring a model into <em>the room.</em></h2>
+        <div class="cta">
+          <a class="badge" href="https://apps.apple.com/app/xrshare/id6752354657" aria-label="Download XRShare on the App Store">
+            <img src="/assets/img/badge-app-store-black.svg" alt="Download on the App Store" width="156" height="52">
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-foot">
+    <div class="wrap">
+      <span>&copy; <span data-year>2026</span> XRShare Technologies</span>
+      <nav aria-label="Footer">
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="/support/">Support</a>
+        <a href="mailto:ali.kara@xrshare.ca">Contact</a>
+        <a href="https://apps.apple.com/app/xrshare/id6752354657">App Store</a>
+      </nav>
+      <span style="flex-basis:100%;font-size:12.5px;color:var(--ink-faint)">Apple, the Apple logo, iPhone, iPad, Apple Vision Pro, FaceTime and SharePlay are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc.</span>
+    </div>
+  </footer>
+</body>
+</html>
