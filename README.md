@@ -16,7 +16,7 @@ The public website for the XRShare app. It is plain static HTML/CSS/JS with no b
 ## Editing
 
 - **Preview locally:** run `python3 -m http.server 8000` in this folder and open <http://localhost:8000>. Paths are root-relative (`/assets/...`), so opening the files directly with `file://` will not work.
-- **Deploy:** push to `main`. GitHub Pages rebuilds within a minute or two.
+- **Deploy:** push to `main`. GitHub Pages rebuilds within a minute or two. Browsers cache CSS/JS for 10 minutes, so when you change `site.css` or `site.js`, bump the `?v=` stamp on their `<link>`/`<script>` tags in all four HTML files (any new value works; the short commit hash is convenient).
 - **Support email:** it appears in `index.html`, `privacy/index.html` and `support/index.html`. Search for `ali.kara@xrshare.ca` to change all of them at once.
 - **When the app's data handling changes** (new network calls, analytics, AI features, new data shared over SharePlay), update `privacy/index.html` and its effective date, and the App Store privacy label, **before** the release ships.
 
