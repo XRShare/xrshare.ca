@@ -138,6 +138,7 @@ h1 em, h2 em { font-style: italic; color: var(--signal); }
   background: transparent;
 }
 .plate model-viewer::part(default-ar-button) { display: none; }
+model-viewer::part(default-progress-bar) { display: none; }
 
 .device {
   position: absolute; display: flex; align-items: center; gap: 8px;
