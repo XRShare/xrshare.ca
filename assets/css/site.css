@@ -198,14 +198,31 @@ h3 { font-size: 26px; line-height: 1.15; }
 .rise.r2 { animation-delay: .06s; } .rise.r3 { animation-delay: .12s; }
 @keyframes rise { from { transform: translateY(12px); } to { transform: none; } }
 
-/* ---------- proof ---------- */
+/* ---------- proof: an atlas figure ---------- */
 
 .proof { padding: 0 0 clamp(64px, 9vw, 128px); }
-.proof figure { margin: 0; display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 4fr); gap: clamp(20px, 4vw, 56px); align-items: end; }
-.proof img { width: 100%; border-radius: 16px; }
-.proof figcaption { padding-bottom: 6px; }
-.proof figcaption p:not(.mono) { font-family: var(--serif); font-size: clamp(22px, 2.2vw, 30px); line-height: 1.2; margin: 12px 0 0; text-wrap: balance; }
-@media (max-width: 760px) { .proof figure { grid-template-columns: 1fr; } }
+.pair { margin: 0; display: grid; grid-template-columns: minmax(0, 560px) minmax(0, 1fr); gap: clamp(28px, 6vw, 96px); align-items: center; }
+.pair-art { position: relative; }
+.pair-art img { width: 100%; filter: drop-shadow(0 28px 36px rgba(20,20,20,.28)); }
+/* leader joining the neuron on each screen (soma at 25.5% and 81.5% across, 50.7% down) */
+.pair-link {
+  position: absolute; left: 25.5%; right: 18.5%; top: 50.7%; transform: translateY(-50%);
+  display: flex; align-items: center; pointer-events: none;
+}
+.pair-link i { flex: 1; height: 1px; background: var(--ink); }
+.pair-link::before, .pair-link::after { content: ""; width: 9px; height: 9px; border-radius: 50%; background: var(--ink); box-shadow: 0 0 0 2px var(--paper); flex: none; }
+.pair-link b {
+  font-weight: 400; font-family: var(--mono); font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; white-space: nowrap;
+  background: var(--paper); padding: 3px 8px; border-radius: 4px; box-shadow: 0 0 0 1px var(--rule);
+}
+.pair figcaption .mono { margin: 0 0 16px; }
+.pair figcaption h2 { font-size: clamp(30px, 3.6vw, 48px); margin-bottom: 18px; }
+.pair figcaption p:not(.mono) { color: var(--ink-soft); margin: 0; max-width: 30em; }
+@media (max-width: 760px) {
+  .pair { grid-template-columns: 1fr; }
+  .pair-art { max-width: 460px; }
+  .pair-link b { font-size: 9.5px; padding: 2px 5px; }
+}
 
 /* ---------- how it works: steps beside a sticky phone ---------- */
 

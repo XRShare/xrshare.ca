@@ -36,7 +36,7 @@ These keep the site from drifting back into a template look (from the September 
 - `assets/models/*.usdz`: the original app models, used for AR Quick Look ("View in your room") on iPhone and iPad.
 - `assets/img/poster-skin.webp`: a transparent render of the skin model at the hero camera (`35deg 72deg 135%`, 30° field of view), shown until the 3D model loads. Re-render it if the hero framing changes.
 - Atlas labels on the skin model are `model-viewer` hotspots with fixed `data-position` values; leader lengths are `--k` (a percentage of the plate width).
-- `assets/img/proof/`: the "same model, same place" image (two iPhones in one session). Replace with a real photo or video of people when available (see the comment in `index.html`).
+- `assets/img/proof/pair-*.webp`: Fig. 2, two iPhones from one SharePlay session cut out onto transparency (from the App Store panels). The leader line between the neurons is positioned in CSS (`.pair-link`, 25.5% and 81.5% across, 50.7% down), so re-measure it if the image changes. Replace with a real photo or video of people when available (see the comment in `index.html`).
 - `assets/img/screens/`: raw iPhone screens for the how-it-works steps (600px wide, no captions or frames).
 - `assets/img/vision/`: Apple Vision Pro screens (1600px) and their thumbnails (`thumb-*.webp`, 320x200).
 - `assets/img/rows/`: 240px square thumbnails for the "what you can do" rows.
